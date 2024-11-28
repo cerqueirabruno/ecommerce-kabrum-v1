@@ -1,25 +1,30 @@
 version: '3.9'
 services:
+  # 3 - FRONT-END
   frontend:
     container_name: app_frontend
     build: ./frontend
     ports:
-      - "3000:3000"
-    working_dir: /frontend
+      - "5173:5173"
+    volumes:
+      - ./frontend:/frontend
+    # working_dir: /frontend
     depends_on:
       - backend
-  
+
+  # 2 - BACK-END
   backend:
     container_name: app_backend
     build: ./backend
     ports:
       - "3001:3001"
-    working_dir: /backend
+    # working_dir: /backend
     volumes:
-      - ./backend/src:backend/src
+      - ./backend:backend
     depends_on:
       - database
-  
+
+  # 1 - DATABASE
   database:
     container_name: app_database
     image: mysql:8.4.2
@@ -27,3 +32,10 @@ services:
       - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=123456
+    restart: always
+    # healthcheck:
+    #   test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"] # deve aguardar o banco ficar operacional
+    #   timeout: 10s
+    #   retries: 5
+    # cap_add:
+    #   - SYS_NICE # deve omitir alertas menores

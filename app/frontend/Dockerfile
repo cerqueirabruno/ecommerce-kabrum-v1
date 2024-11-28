@@ -1,8 +1,10 @@
-FROM node:16.14-alpine
-WORKDIR /backend
-COPY package*.json ./
+# FRONT-END
+FROM node:22.11-alpine
+WORKDIR /frontend
+COPY package.json ./
+COPY package-lock.json ./
 RUN npm install
-COPY . .
-EXPOSE 3000
-ENTRYPOINT [ "npm", "run" ]
-CMD [ "start" ]
+EXPOSE 5173
+CMD npm run dev
+# ENTRYPOINT [ "npm", "run" ]
+# CMD [ "dev" ]
