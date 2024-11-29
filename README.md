@@ -1,6 +1,6 @@
-# 🛒 Ecommerce BTech
+# 🛒 Ecommerce KABRUM
 
-**Ecommerce BTech** é um projeto de portfólio focado na criação de uma loja virtual especializada em produtos de informática. Este projeto foi desenvolvido para mostrar habilidades técnicas em desenvolvimento web utilizando tecnologias modernas para o front-end, back-end e integração de banco de dados.
+**Ecommerce KABRUM** é um projeto de portfólio focado na criação de uma loja virtual especializada em produtos de informática. Este projeto foi desenvolvido para mostrar habilidades técnicas em desenvolvimento web utilizando tecnologias modernas para o front-end, back-end e integração de banco de dados.
 
 ![Banner](https://via.placeholder.com/900x300)
 
