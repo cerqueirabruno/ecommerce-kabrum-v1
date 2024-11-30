@@ -13,7 +13,7 @@
 ### Front-end
 - **HTML5**: Estruturação de páginas;
 - **CSS3**: Estilização customizada e responsiva;
-- **JavaScript:**: Dinamismo e tipagem;
+- **JavaScript e TypeScript**: Dinamismo e tipagem;
 - **React**: Biblioteca para construção de interfaces;
 - **React Router**: Gerenciamento de rotas;
 - **React Redux**: Gerenciamento de estado global;

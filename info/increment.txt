@@ -1,0 +1,8 @@
+socket.io (chat cliente e atendente)
+mysql2 (conexão com o banco)
+dark-mode/light-mode
+produtos (criar, editar, remover, listar, pesquisar)
+produtos (nome, valor, descrição valor, descrição, estoque...)
+imagens apontado para algum storage ex.: aws s3
+painel admin (cadastrar, editar produtos e clientes)
+usuário (admin, normal)
