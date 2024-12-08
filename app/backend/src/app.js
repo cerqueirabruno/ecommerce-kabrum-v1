@@ -1,5 +1,6 @@
 // IMPORTAÇÃO DE MÓDULOS
 const express = require('express');
+const cors = require('cors');
 
 // IMPORTAÇÃO DE ROTAS
 // const productsRouter = require('./routes/products');
@@ -11,6 +12,7 @@ const app = express();
 
 // MIDDLEWARES
 app.use(express.json());
+app.use(cors());
 
 // ROTA DEFAULT
 app.get('/', (request, response) => {

@@ -13,26 +13,28 @@
 ### Front-end
 - **HTML5**: Estruturação de páginas;
 - **CSS3**: Estilização customizada e responsiva;
-- **JavaScript e TypeScript**: Dinamismo e tipagem;
+- **TypeScript**: Dinamismo e tipagem;
 - **React**: Biblioteca para construção de interfaces;
 - **React Router**: Gerenciamento de rotas;
 - **React Redux**: Gerenciamento de estado global;
 - **Jest**: Testes unitários;
+- **Vite**: Tools;
 
 ### Back-end
 - **Node.js**: Ambiente de execução JavaScript no servidor;
 - **Express**: Framework minimalista para aplicações web;
 - **Nodemon**: Ferramenta para reinicializar o servidor automaticamente;
 - **Mocha, Sinon, Chai**: Testes unitários e mocks;
-- **Sequelize**: ORM para trabalhar com o banco de dados;
+- **Sequelize ORM**: ORM para trabalhar com o banco de dados;
 - **JWT**: Autenticação segura via tokens;
+- **Arquitetura MSC**: Arquitetura em camadas MSC (Model Service Controller)
 
 ### Banco de Dados
 - **MySQL**: Banco de dados relacional para armazenar produtos, pedidos e usuários;
 
 ### Outros
-- **Git & GitHub**: Controle de versão e colaboração;
 - **Docker**: Conteinerização dos serviços;
+- **Git & GitHub**: Controle de versão e colaboração;
 
 <br>
 
@@ -79,7 +81,7 @@ Antes de tudo, é necessário ter o <span style="color: #309fff;">**Docker**</sp
 ## 📁 Estrutura de Pastas
 
 ```bash
-ecommerce-btech/
+ecommerce-kabrum-v1/
 │
 ├── frontend/ # código do front-end
 ├── backend/ # código do back-end
