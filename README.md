@@ -50,7 +50,7 @@ Antes de tudo, é necessário ter o <span style="color: #309fff;">**Docker**</sp
     git clone git@github.com:cerqueirabruno/ecommerce-btech.git
 
     # entrar no diretório do projeto;
-    cd ecommerce-btech
+    cd app
 
     # sobe os serviços;
     docker-compose up -d
