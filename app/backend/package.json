@@ -1,21 +1,21 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "4.16.4"
+    "cors": "2.8.5",
+    "express": "4.16.4",
+    "morgan": "1.10.0"
   },
   "devDependencies": {
     "nodemon": "2.0.22"
