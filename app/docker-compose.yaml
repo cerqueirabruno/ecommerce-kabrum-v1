@@ -36,6 +36,8 @@ services:
       # - MYSQL_PASSWORD=1234
       # - MYSQL_ROOT_PASSWORD=123456
       # - MYSQL_DATABASE=kabrum
+    volumes:
+      - ./database/database_script.sql:/docker-entrypoint-initdb.d/database_script.sql # EXECUTA O SCRIPT AO INICIAR O CONTAINER
     restart: always
     healthcheck: # DEVE AGUARDAR O BANCO DE DADOS FICAR OPERACIONAL
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
