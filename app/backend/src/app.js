@@ -6,7 +6,7 @@ const morgan = require('morgan');
 const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
 const ordersRouter = require('./routes/ordersRouter');
-const addressRouter = require('./routes/addressRouter');
+// const addressRouter = require('./routes/addressRouter');
 
 // INVOCAÇÕES
 const app = express();
@@ -24,7 +24,7 @@ app.get('/', (request, response) => {
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/orders', ordersRouter);
-app.use('/address', addressRouter);
+// app.use('/address', addressRouter);
 
 // ROTA ARQUIVOS ESTÁTICOS (IMAGENS)
 // ROTA LEITURA E ESCRITA DE ARQUIVOS

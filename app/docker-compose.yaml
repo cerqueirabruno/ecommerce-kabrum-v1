@@ -27,18 +27,17 @@ services:
   # 1 - DATABASE
   database:
     container_name: app_database
-    build: ./database
-    # image: mysql:8.4.2
+    # build: ./database
+    image: mysql:8.4.2
     ports:
       - "3306:3306"
-    # environment:
-      # - MYSQL_USER=admin
-      # - MYSQL_PASSWORD=1234
-      # - MYSQL_ROOT_PASSWORD=123456
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
       # - MYSQL_DATABASE=kabrum
     volumes:
-      - ./database/database_script.sql:/docker-entrypoint-initdb.d/database_script.sql # EXECUTA O SCRIPT AO INICIAR O CONTAINER
-    restart: always
+      # - ./database:/var/lib/mysql # PERSISTÊNCIA DE DADOS
+      - ./database/sql:/docker-entrypoint-initdb.d # EXECUTA O SCRIPT AO INICIAR O CONTAINER
+    restart: always # SEMPRE REINICIA O CONTAINER
     healthcheck: # DEVE AGUARDAR O BANCO DE DADOS FICAR OPERACIONAL
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       timeout: 10s
