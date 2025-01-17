@@ -28,7 +28,7 @@ CREATE TABLE products (
 CREATE TABLE orders (
     id INTEGER PRIMARY KEY AUTO_INCREMENT, -- ID
     purchase_date DATE DEFAULT(NOW()), -- DATA DA COMPRA
-    time TIME DEFAULT CURRENT_TIME, -- HORA DA COMPRA AUTOMÁTICA
+    time TIME DEFAULT CURRENT_TIMESTAMP, -- HORA DA COMPRA AUTOMÁTICA @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ERRRO
     value DECIMAL(10, 2) NOT NULL, -- VALOR
     observation TEXT, -- OBSERVAÇÃO
     user_id INT, -- @REF
