@@ -27,6 +27,7 @@ app.use('/orders', ordersRouter);
 // app.use('/address', addressRouter);
 
 // ROTA ARQUIVOS ESTÁTICOS (IMAGENS)
+
 // ROTA LEITURA E ESCRITA DE ARQUIVOS
 
 // ROTA ERRO
@@ -41,3 +42,7 @@ app.use((error, request, response, next) => {
 
 // EXPORTAÇÃO DO APP
 module.exports = app;
+
+// docker run --name kabrum_database -e MYSQL_ROOT_PASSWORD=123456 -d -p 3306:3306 mysql:latest
+// docker exec -it kabrum_database bash
+// mysql -u root -p
