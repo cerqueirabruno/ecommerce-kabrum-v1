@@ -1,4 +1,4 @@
-INSERT INTO orders (purchase_date, time, value, observation, user_id) VALUES
+INSERT INTO orders (value, observation, user_id) VALUES
   (1999.99, 'Entrega expressa', 1),
   (4799.99, 'Retirar na loja', 2),
   (3200.00, 'Entregar no período da tarde', 3),

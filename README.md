@@ -47,7 +47,9 @@ Antes de tudo, é necessário ter o <span style="color: #309fff;">**Docker**</sp
 1. **Baixar o repositório**:
     ```bash
     # baixa o repositório localmente;
-    git clone git@github.com:cerqueirabruno/ecommerce-btech.git
+    git clone https://github.com/cerqueirabruno/ecommerce-kabrum-v1 # versão 1
+    git clone https://github.com/cerqueirabruno/ecommerce-kabrum-v2 # versão 2
+    git clone https://github.com/cerqueirabruno/ecommerce-kabrum-v3 # versão 3
 
     # entrar no diretório do projeto;
     cd app
