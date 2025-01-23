@@ -16,7 +16,7 @@ chai.use(chaiHttp);
 
 const { expect } = chai;
 
-// const app = require('../../src/app');
+const app = require('../../src/app');
 
 describe('teste da rota /products', function() {
   it('GET /products', async function () {
