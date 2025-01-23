@@ -1,6 +1,6 @@
 const express = require('express');
 const connection = require('../db/connection');
-const { getAll, getById, insert } = require('../db/productsDB');
+const { getAll, getById, insert, update } = require('../db/productsDB');
 
 const router = express.Router();
 
@@ -43,5 +43,38 @@ router.post('/', async (request, response) => {
     response.status(500).json({ message: 'Ocorreu um erro ao cadastrar uma pessoa' });
   }
 });
+
+router.put('/:id', async (request, response) => {
+  const { id } = request.params;
+  const product = request.body;
+
+  try {
+    const [result] = await update(id, product);
+    if (result.affectedRows > 0) {
+      response.status(200).json({ message: `Produto de id: ${id} atualizado com sucesso` });
+    } else {
+      response.status(404).json({ message: 'Produto não encontrado' });
+    }
+  } catch (error) {
+    response.status(500).json({ message: error.sqlMessage });
+  }
+});
+
+/*
+router.delete('/:id', async (request, response) => {
+  const { id } = request.params;
+
+  try {
+    const [result] = await remove(id);
+    if (result.affectedRows > 0) {
+      response.status(200).json({ message: `Produto de id ${id} removido com sucesso`});
+    } else {
+      response.status(404).json({ message: 'Produto não encontrado' });
+    }
+  } catch (error) {
+    response.status(500).json({ message: error.sqlMessage });
+  }
+});
+*/
 
 module.exports = router;

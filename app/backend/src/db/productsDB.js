@@ -14,8 +14,21 @@ const insert = (product) => connection.execute(
   [product.name, product.value, product.description, product.stock],
 );
 
+const update = (id, product) => connection.execute(
+  `UPDATE products 
+    SET name = ?, value = ?, description = ?, stock = ? WHERE id = ?`,
+  [product.name, product.value, product.description, product.stock, id],
+);
+
+/*
+const remove = (id) => connection.execute(
+  `DELETE FROM products WHERE id = ?`, [id]
+);
+*/
+
 module.exports = {
   getAll,
   getById,
-  insert
+  insert,
+  update
 };

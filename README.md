@@ -28,6 +28,8 @@
 - **Sequelize ORM**: ORM para trabalhar com o banco de dados;
 - **JWT**: Autenticação segura via tokens;
 - **Arquitetura MSC**: Arquitetura em camadas MSC (Model Service Controller)
+- **SOLID**: Princípios de design de código;
+- **Swagger**: Documentação de API;
 
 ### Banco de Dados
 - **MySQL**: Banco de dados relacional para armazenar produtos, pedidos e usuários;
