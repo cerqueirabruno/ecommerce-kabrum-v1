@@ -1,9 +1,11 @@
 const express = require('express');
 const connection = require('../db/connection');
 const { getAll, getById, insert, update } = require('../db/productsDB');
+const validateProduct = require('../middlewares/validateProduct');
 
 const router = express.Router();
 
+// ROTAS GET
 router.get('/', async (request, response) => {
   try {
     const [result] = await getAll();
@@ -31,7 +33,8 @@ router.get('/:id', async (request, response) => {
   }
 });
 
-router.post('/', async (request, response) => {
+// ROTAS POST
+router.post('/', validateProduct, async (request, response) => {
   const product = request.body;
   
   try {
@@ -44,6 +47,7 @@ router.post('/', async (request, response) => {
   }
 });
 
+// ROTAS UPDATE
 router.put('/:id', async (request, response) => {
   const { id } = request.params;
   const product = request.body;
@@ -60,6 +64,7 @@ router.put('/:id', async (request, response) => {
   }
 });
 
+// ROTAS DELETE
 /*
 router.delete('/:id', async (request, response) => {
   const { id } = request.params;
