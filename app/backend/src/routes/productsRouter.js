@@ -1,5 +1,5 @@
 const express = require('express');
-const connection = require('../db/connection');
+const connection = require('../db/connection/connection');
 const { getAll, getById, insert, update } = require('../db/productsDB');
 const validateProduct = require('../middlewares/validateProduct');
 
